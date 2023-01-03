@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<div class="add-1">
+
+    <div class="adding">
+       Search for a address
+    </div>
+    <form action="" method="POST", enctype="multipart/form-data" >
+      <div class="add">
+      {{form.hidden_tag()}}
+      <P>
+      {{form.first_name.label}}<br />
+      <input id="first_name" name="first_name"  type="text"/>
+      </P>
+      <p>
+        {{form.submit(class="add-form")}}
+      </p>
+        </div>
+    </form>
+
+    </div>
+{% if status == "found_for_edit" %}
+<p> {{new_url}} </p>
+<button><a href=/editing?{{new_url}}>edit</a></button><br />
+<button><a href=/delete?{{new_url}}>delete</a></button>
+
+{% endif %}
+{% if status == "not found" %}
+<p> not found </p>
+{% endif %}
+</html>
