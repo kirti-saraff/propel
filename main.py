@@ -10,7 +10,8 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'C2HWGVoMGfNTBsrYQg8EcMrdTimkZfAb'
 
 @app.route('/', methods=['GET','POST'])
-def ADD():
+def Add():
+    status=""
     form = AddressForm()
     if form.validate_on_submit():
         first_name = form.first_name.data
@@ -28,8 +29,9 @@ def ADD():
             file_data['addresses'].append(x)
             f.seek(0)
             json.dump(file_data, f, indent = 4)
+            status = "Address added"
         
-    return render_template('add.html',form=form)
+    return render_template('add.html',form=form, status=status)
     #with open('data.json','r') as f:
      #   table = json.loads(f.read())
       #  print(table)
@@ -41,8 +43,8 @@ def ADD():
 def listAll():
     with open('data.json','r') as f:
         table = json.loads(f.read())
-        print(table)
-        return table
+        return render_template('table.html', table=table)
+    
 
 @app.route('/search',methods=['GET','POST'])
 def Search():
@@ -60,6 +62,9 @@ def Search():
                 if address['first_name'] == first_name:
                     content = address
                     status = "found"
+        
+        if status != "found":
+            status = "not found"
 
     return render_template('list.html',form=form, status=status, content=content)
 
@@ -160,7 +165,7 @@ def delete():
         json.dump(final_data, f, indent = 4)
         status = "selected address data deleted"
     f.close()
-    return redirect(url_for("listAll"))
+    return redirect(url_for("Add"))
 
 
 

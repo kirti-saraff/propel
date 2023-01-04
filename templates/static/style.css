@@ -1,0 +1,1002 @@
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  ul {
+    background-color: rgba(255, 255, 255, 1);
+    list-style-type: none;
+    position: fixed;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    font-family: "nav-font";
+    font-size: 85%;
+  }
+  
+  
+  #board {
+    height: 100vh;
+    width: 100vh;
+  }
+  
+  @font-face {
+    font-family: "text-font";
+    src: url('fonts/sanspro.ttf');
+  }
+  
+  @font-face {
+    font-family: "head-font";
+    src: url('fonts/CORBEL.TTF');
+  }
+  
+  @font-face {
+    font-family: "nav-font";
+    src: url('fonts/corbel-light.ttf');
+  }
+  
+  
+  .add {
+    font-family: "nav-font";
+  }
+  
+  .active {
+    background-color: #4CAF50;
+  }
+  
+  .background {
+    margin: 0;
+    background-image: linear-gradient( rgba(59, 135, 209, 1), rgba(101, 83, 223, 1));
+    height: 100%;
+    width: 20%;
+    display: block;
+  }
+  
+  .background2 {
+    margin: 0;
+    background-image: linear-gradient( rgba(59, 135, 209, 1), rgba(101, 83, 223, 1));
+    height: 100%;
+    width: 100%;
+  }
+  
+  .center-content {
+    width: 1000px;
+    height: 800px;
+    margin: auto;
+    padding-top: 100px;
+  }
+  
+  .stf {
+    width: 80%;
+    float: right;
+    padding-top: 100px;
+    height: 100%;
+  }
+  
+  .mvz {
+    width: 79%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding:0;
+    margin-top: 98px;
+    float: right;
+  }
+  
+  .mvz img {
+    height: 320px;
+    width: 216px;
+  }
+  
+  .it {
+    display: block;
+    padding: 16px;
+  }
+  
+  .titl {
+    line-height: 35px;
+    text-align: center;
+    font-family: "nav-font";
+    height: 35px;
+    background-color: white;
+  }
+  
+  
+  .login-button {
+    font-weight: 900;
+    font-size: 90%;
+    font-family: "text-font";
+    width: 325px;
+    background-color: white;
+    border: 2px white;
+    height: 40px;
+    margin-top: 10px;
+    color: rgba(59, 136, 209, 1);
+    cursor: pointer;
+  }
+  
+  .login-button:hover {
+    transition: 0.25s;
+    background-color: rgba( 220,220,220,1);
+  }
+  
+  .moviez {
+    width: 1370px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .moviez img{
+    padding: 17px;
+  }
+  
+  .login-field {
+    height: 40px;
+    width: 312px;
+    font-size: 100%;
+    padding-left: 10px;
+    font-family: "text-font";
+    margin-top: 10px;
+    background-color: rgba(1,1,1,0);
+    border: 0;
+    border-bottom: 2px solid rgba(189, 213, 242, 1);
+    color: white;
+    padding-bottom: 0;
+  }
+  
+  
+  
+  .login-welcome {
+    font-family: "nav-font";
+    font-size: 133%;
+    color: rgba(189, 213, 242, 1);
+    padding: 5px 0 0 0;
+  }
+  
+  .room {
+    font-family: "text-font";
+    font-size: 97%;
+    color: white;
+  }
+  
+  .room2 {
+    font-family: "nav-font";
+    font-size: 94%;
+    color: white;
+  }
+  
+  .login-window {
+    display: block;
+    padding-top: 50px;
+    height: 350px;
+    width: 450px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -225px;
+    text-align: center;
+  }
+  
+  
+  .nav {
+    border: 0;
+    list-style: none;
+    padding: 0;
+    height: 100%;
+    width: 20%;
+    margin-top: 80px;
+    background-image: linear-gradient( rgba(59, 135, 209, 1), rgba(101, 83, 223, 1));
+  }
+  
+  .nav a {
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 175%;
+    margin: auto;
+    float: left;
+    padding: 20px 0 20px 50%;
+    position: relative;
+    right: 100px;
+  }
+  
+  .nav li {
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+  }
+  
+  
+   .nav-ico {
+    width: 17px;
+    height: 17px;
+    padding-right: 12px;
+  }
+  
+  .aux {
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .aux-s {
+    background-color: rgba( 255,255,255,0.22);
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .aux:hover {
+    background-color: rgba( 255,255,255,0.12);
+    color: white;
+    transition: 0s;
+  }
+  
+  .top-bar {
+    width:100%;
+    height: 80px;
+    border: 0;
+    position:fixed;
+    z-index: 10;
+    background-color: white;
+  }
+  
+  .panel {
+    height: 80px;
+    width: 20%;
+    float: left;
+    font-family: "nav-font";
+    font-size: 222%;
+    line-height: 80px;
+    text-align: center;
+    color: white;
+    background-color: rgba(53,116,179,1);
+  }
+  
+  .sbar {
+    position: fixed;
+    right: 2vw;
+    top: 25px;
+    z-index: 90;
+    border: 0;
+    font-family: "nav-font";
+    font-size: 110%;
+    padding-left: 10px;
+    transform: translate(10px, -200px;);
+    width: 203px;
+    border-radius: 0;
+    height: 30px;
+    background-color: rgba(220,224,232,1);
+  }
+  
+  .scroll {
+    width: 197px;
+    height: 184px;
+    font-family: "nav-font";
+    padding: 5px;
+    font-size: 120%;
+  }
+  
+  .add-form {
+    width: 197px;
+  }
+  
+  .bg {
+    background-color: rgba(220,224,232,1);
+    overflow-y: scroll;
+    /*background-color: rgba(212,218,224,1);*/
+  }
+  
+  .adding {
+    font-family: "nav-font";
+    font-size: 222%;
+    padding-bottom: 20px;
+  
+  }
+  
+  .add {
+    width: 250px;
+    vertical-align: top;
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+    border: 1px;
+  }
+  
+  .f-b {
+    width: 197px;
+  }
+  
+  .desc {
+    /*border: 1px solid red;*/
+    display: inline-block;
+  }
+  .mv {
+    width: 340px;
+    height: 182px;
+    background-color: white;
+    margin: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 16px;
+  }
+  
+  .kartinka {
+    display: inline-block;
+  }
+  .kartinka img{
+    height: 182px;
+    width: 117px;
+  }
+  
+  .dsc {
+    display: inline-block;
+    font-family: "nav-font";
+    font-size: 112%;
+    height: 182px;
+    width: 300px;
+    line-height: 30px;
+    padding-left: 10px;
+  
+  }
+  
+  
+  .ent {
+  
+    width: 100%;
+    font-size: 80%;
+  }
+  
+  .ent2 {
+    width: 100%;
+    padding-top: 4px;
+  }
+  
+  .deleter {
+    display: inline;
+  }
+  
+  .mvz2 {
+  
+    width: 79%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding:0;
+    margin-top: 98px;
+    float: right;
+  }
+  
+  
+  
+  .add-1 {
+    width: 1350px;
+    margin: auto;
+    padding-top: 120px;
+    text-align: center;
+    font-family: "nav-font";
+  }
+  
+  .booker {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .tickit {
+    font-family: "nav-font";
+    text-align: left;
+    padding-left:100px;
+    padding-top: 20px;
+  }
+  
+  .ttl {
+    font-family: "nav-font";
+    font-size: 170%;
+    margin-top: 35px;
+  }
+  
+  .view {
+    width: 1350px;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+    font-family: "nav-font";
+  }
+  
+  .nb {
+    width: 212px;
+  }
+  
+  .table {
+    background-color: white;
+    padding-top: 5px;
+    border-radius: 2px;
+    margin: auto;
+    width: 212px;
+  }
+  
+  .table-1 {
+  
+    background-color: white;
+    margin: 0 auto 0 auto;
+    border-radius: 2px;
+    padding: 5px;
+    font-size: 120%;
+  }
+  
+  .table-2 {
+  
+    width: 300px;
+    background-color: white;
+    margin: auto;
+    border-radius: 2px;
+    padding: 5px;
+    position: relative;
+    right: 25px;
+    top: 15px;
+  }
+  
+  
+  .del {
+  
+    background-color: rgba(210, 90, 90, 1);
+    color: black;
+  
+    font-size: 85%;
+    font-family: "nav-font";
+    width: 90px;
+    margin-top: 25px;
+    border: 0;
+    cursor: pointer;
+  
+    padding: 2px;
+  }
+  
+  .del:hover {
+    transition: 0.22s;
+    background-color: rgba(220, 35, 35, 1);
+    color: white;
+  }
+  
+  .cell {
+    padding: 0 20px 0 20px;
+  }
+  
+  
+  .bf {
+    font-family: "head-font";
+  }
+  
+  
+  .inf {
+    position: relative;
+    right: 10px;
+    background-color: white;
+    width: 400px;
+    height: 430px;
+    display: inline-block;
+    vertical-align: top;
+    z-index: 1;
+  }
+  
+  .ph {
+    width: 300px;
+    height: 430px;
+    display: inline-block;
+    vertical-align: top;
+    z-index: 10;
+  }
+  
+  .shift {
+    float: left;
+    padding: 5px;
+    font-size: 120%;
+  }
+  
+  .shift1 {
+    float: left;
+    padding: 5px;
+    font-size: 160%;
+  }
+  
+  .blst {
+    height: 170px;
+    padding: 5px;
+    font-size: 120%;
+  }
+  
+  .bookt {
+    border: 0;
+    border-radius: 0;
+    background-color: rgba(59, 135, 209, 1);
+    width: 90px;
+    height: 25px;
+    position: relative;
+    left: 65px;
+    color: white;
+    font-family: 'text-font';
+    cursor: pointer;
+  }
+  
+  .bookt:hover {
+    background-color: rgba( 133,170,222,1);
+    color: white;
+    transition: 0.1s;
+  }
+  
+  
+  .shift-2 {
+    float: left;
+    padding: 5px;
+    font-size: 120%;
+    position: relative;
+    right: 45px;
+  }
+  
+  .ts {
+    float: left;
+    margin-left: 38px;
+  font-size: 100%;
+    z-index: 100;
+      font-family: 'nav-font';
+  
+  
+  }
+  
+  
+  .table-3 {
+  
+    width: 125px;
+    background-color: white;
+    margin: auto;
+    border-radius: 2px;
+    padding: 5px;
+    position: relative;
+    right: 90px;
+    bottom: 15px;
+  }
+  
+  .stats {
+  
+    text-align: center;
+  }
+  
+  .stable {
+    margin: 0 auto 0 auto;
+    background-color: white;
+    border-radius: 2px;
+    font-size: 120%;
+  }
+  
+  
+  .bf4 {
+    padding-top: 10px;
+    border: 0;
+    font-family: "head-font";
+    background-color: rgba(235,235,235,1);
+    text-decoration: underline;
+  }
+  
+  
+  .tickett {
+    height:30px;
+    width: 45px;
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  
+  
+  /*.ticketh {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }*/
+  
+  .paybutton {
+    position: relative;
+    margin-right: 10px;
+    top: 89px;
+    right: 106px;
+    border: 0;
+    border-radius: 0;
+    color: white;
+    background-color: rgba(59, 135, 209, 1);
+    cursor: pointer;
+    font-size: 100%;
+    width: 100px;
+    height: 30px;
+    font-family: "nav-font";
+  }
+  
+  .paybutton2 {
+    position: relative;
+    margin-right: 10px;
+    top: 176px;
+    right: 106px;
+    border: 0;
+    border-radius: 0;
+    color: white;
+    background-color: rgba(59, 135, 209, 1);
+    cursor: pointer;
+    font-size: 100%;
+    width: 100px;
+    height: 30px;
+    font-family: "nav-font";
+  }
+  
+  .time {
+    margin-top: 20px;
+  }
+  
+  .price {
+    display: inline-block;
+    width: 170px;
+    padding-left: 10px;
+    text-align: left;
+    margin-right: 90px;
+  }
+  
+  .price2 {
+    display: inline-block;
+    width: 180px;
+    margin-right: 80px;
+  }
+  
+  .cash {
+    height:30px;
+    width: 45px;
+    margin-left: 5px;
+    margin-right: 0;
+    margin-top: 10px;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  
+  .paybutton3 {
+    position: relative;
+    margin-right: 10px;
+    top: 220px;
+    right: 106px;
+    border: 0;
+    border-radius: 0;
+    color: white;
+    background-color: rgba(59, 135, 209, 1);
+    cursor: pointer;
+    font-size: 100%;
+    width: 100px;
+    height: 30px;
+    font-family: "nav-font";
+  }
+  
+  .logo {
+    position: relative;
+    bottom: 635px;
+    left: 530px;
+    width: 30px;
+    height: 26px;
+  }
+  
+  .tinf {
+    margin-top: 15px;
+  }
+  
+  .tick {
+    padding: 12px;
+    margin: 5px;
+    width: 462px;
+    background-color: white;
+    display: inline-block;
+  }
+  
+  .cont {
+    width: 100%;
+  
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding:0;
+    float: right;
+    font-family: 'nav-font';
+  }
+  
+  .identr {
+    display: inline-block;
+    width: 100px;
+    font-size: 100%;
+  }
+  
+  .mventr {
+    display: inline-block;
+    width: 200px;
+    font-size: 100%;
+  }
+  
+  .flash {
+    color: red;
+    display: block;
+    position: relative;
+    top: 5px;
+    left: 37px;
+    float: left;
+    height: 30px;
+  }
+  
+  .flash-login {
+    margin-top: 20px;
+    position: relative;
+    top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    font-family: 'text-font';
+    font-size: 80%;
+    font-weight:normal;
+    color: white;
+  }
+  
+  .newacc {
+    padding: 4px 0;
+  }
+  
+  .reg {
+    margin: 4px 17px;
+    color: rgba(220,220,220,1);
+    text-decoration: underline;
+    font-family: "text-font";
+    font-size: 95%;
+    cursor: pointer;
+  }
+  
+  .reg:hover {
+    color: white;
+    transition: 0.1s;
+  }
+  
+  
+  
+  .st {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    border: 1px solid rgba(1, 33, 7, 0);
+    padding: 0;
+    background-color: rgba(59, 135, 209, 1);
+    color: rgba(1,1,1, 0);
+    cursor: pointer;
+  }
+  
+  .st2 {
+    width: 14px;
+    height: 14px;
+    border: 1px solid rgba(59, 135, 209, 1);
+    padding: 0;
+    background-color: rgba(1, 33, 7, 0);
+    color: rgba(1,1,1, 0);
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .stv {
+    width: 14px;
+    height: 14px;
+    border: 1px solid rgba(101, 83, 223, 1);
+    padding: 0;
+    background-color: rgba(101, 83, 223, 1);
+    color: rgba(1,1,1, 0);
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .stv2 {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    border: 1px solid rgba(101, 83, 223, 1);
+    padding: 0;
+    background-color: rgba(1, 33, 7, 0);
+    color: rgba(1,1,1, 0);
+    cursor: pointer;
+  }
+  
+  .st3 {
+    width: 14px;
+    height: 14px;
+    border: 1px solid black;
+    padding: 0;
+    background: url('./icons/cr-ico4.png');
+    color: rgba(1,1,1, 0);
+    display: inline-block;
+  }
+  
+  .st:disabled{
+    pointer-events: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: relative;
+    top: 7px;
+    margin-right: 2px;
+  }
+  
+  .stv:disabled {
+    pointer-events: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: relative;
+    top: 7px;
+    margin-right: 2px;
+  }
+  
+  .st:hover {
+    background-color: rgba(90, 160, 235, 1);
+  
+  }
+  
+  .st2:hover {
+    background-color: rgba(200, 215, 235, 1);
+  }
+  
+  .stv:hover {
+    background-color: rgba(131, 103, 243, 1);
+  }
+  
+  .sts {
+    display: inline-block;
+    width: 202px;
+    height: 120px;
+    padding: 0;
+    margin: 0;
+    line-height: 40px;
+  }
+  
+  .screen {
+    margin: 15px 0;
+    width: 190px;
+    height: 14px;
+    font-size: 70%;
+    font-family: 'nav-font';
+    color: black;
+    border: 1px solid black;
+  }
+  
+  
+  .rw {
+    display: inline-block;
+    position: relative;
+    bottom: 4px;
+    width: 12px;
+    height: 5px;
+  
+    border: 0;
+    padding: 0;
+    font-size: 60%;
+    font-family: 'nav-font';
+  }
+  
+  .ns {
+    margin-top: 15px;
+    width: 190px;
+    font-size: 70%;
+    text-align: left;
+    padding-left: 5px;
+  }
+  
+  .nn {
+    width: 14px;
+    margin: 0;
+    border: 1px solid rgba(1, 33, 7, 0);
+    text-align: center;
+    display: inline-block;
+  }
+  
+  
+  .btns {
+    width: 300px;
+    border: 1px solid red;
+  }
+  
+  .sbm {
+    position: relative;
+    margin-top:24px;
+    top: 1px;
+    left: 2px;
+    border: 0;
+    border-radius: 0;
+    color: white;
+    background-color: rgba(59, 135, 209, 1);
+    cursor: pointer;
+    font-size: 80%;
+    width: 100px;
+    height: 30px;
+    font-family: "nav-font";
+  }
+  
+  .sbm:disabled {
+    background-color: grey;
+    pointer-events: none;
+  }
+  
+  .sbm:hover {
+    background-color: rgba( 133,170,222,1);
+    color: white;
+    transition: 0.1s;
+  }
+  
+  .paybutton:hover {
+    background-color: rgba( 133,170,222,1);
+    color: white;
+    transition: 0.1s;
+  }
+  
+  .badnavs {
+    border: 1px solid red;
+    position: relative;
+    bottom: 1000px;
+  }
+  
+  
+  .badnavs2 {
+    position: fixed;
+    top: 10px;
+    z-index: 90;
+    border: 0;
+    font-family: "nav-font";
+    font-size: 140%;
+    transform: translate(10px, -200px;);
+    width: 77vw;
+    border-radius: 0;
+    height: 60px;
+    text-align:center;
+    overflow: hidden;
+    z-index: 100;
+  }
+  
+  .badnav {
+    margin: 0 60px;
+    line-height: 60px;
+    z-index: 100;
+    padding: 30px auto;
+    display: inline-block;
+  }
+  
+  .badhref {
+      color: black;
+      cursor: pointer;
+      z-index: 100;
+      text-decoration: none;
+  }
+  
+  .badhref-a {
+      color: black;
+      cursor: pointer;
+      z-index: 100;
+      text-decoration: none;
+      font-weight: 900;
+  }
+  
+  .badhref:hover {
+    text-decoration: underline;
+  }
+  
+  .agn {
+    font-family: 'nav-font';
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  
+  .labl {
+    font-family: 'nav-font';
+    font-size: 111%;
+    display: block;
+  }
+  

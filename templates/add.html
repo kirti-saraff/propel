@@ -1,39 +1,37 @@
-<!DOCTYPE html>
+{%extends "base.html" %}
+{% block content %}
 <div class="add-1">
-
-    <div class="adding">
+    <div class="heading">
        Add a new address
     </div>
-    <form action="" method="POST", enctype="multipart/form-data" >
-      <div class="add">
-      {{form.hidden_tag()}}
-      <P>
-      {{form.first_name.label}}<br />
-      <input id="first_name" name="first_name"  type="text"/>
-      </P>
-      <p>
-        {{form.last_name.label}}<br />
-        <input id="last_name"  name="last_name"  type="text"/>
-      </p>
-      <p>
-        {{form.phone.label}}<br />
-        <input id="phone" name="phone"type="text"/>
-      </p>
-      <p>
-        {{form.email.label}}<br />
-        <input id="email" name="email" type="text"/>
-      </p>
-      </div>
-      <div class="add">
-      <p>
-        {{form.submit(class="add-form")}}
-      </p>
-        </div>
-    </form>
-    
-    
-    
+        <form action="" method="POST", enctype="multipart/form-data" >
+            <div class="container">
+                {{form.hidden_tag()}}
+                <p>
+                    <label for="fname">First Name</label> <br />
+                    <input id="first_name" name="first_name"  type="text"/>
+                </p>
+                <p>
+                    <label for="fname">Last Name</label> <br />
+                    <input id="last_name"  name="last_name"  type="text"/>
+                </p>
+                <p>
+                    <label for="fname">Phone</label> <br />
+                    <input id="phone" name="phone"type="text"/>
+                </p>
+                <p>
+                    <label for="fname">Email</label> <br />
+                    <input id="email" name="email" type="text"/>
+                </p>
+                
+                </div>
+                <div class="container">
+                <p>
+                    {{form.submit(class="add-form")}}
+                </p>
+            </div>
+        </form>
     </div>
+    {{status}}
     
-    
-</html>
+    {%endblock%}

@@ -1,19 +1,20 @@
-<!DOCTYPE html>
+{%extends "base.html" %}
+{% block content %}
 <div class="add-1">
 
-    <div class="adding">
+    <div class="heading">
        Search for a address
     </div>
     <form action="" method="POST", enctype="multipart/form-data" >
-      <div class="add">
-      {{form.hidden_tag()}}
-      <P>
-      {{form.first_name.label}}<br />
-      <input id="first_name" name="first_name"  type="text"/>
-      </P>
-      <p>
-        {{form.submit(class="add-form")}}
-      </p>
+      <div class="container">
+            {{form.hidden_tag()}}
+            <p>
+                <label for="fname">First Name</label> <br />
+                <input id="first_name" name="first_name"  type="text"/>
+            </p>
+            <p>
+                {{form.submit(class="add-form")}}
+            </p>
         </div>
     </form>
 
@@ -22,6 +23,6 @@
 <p> {{content}} </p>
 {% endif %}
 {% if status == "not found" %}
-<p> not found </p>
+<p> Name not in the file </p>
 {% endif %}
-</html>
+{%endblock%}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;
+        background-color: bisque;}
+        * {box-sizing: border-box;}
+
+        .navbar {
+            overflow: hidden;
+            background-color: rgb(8, 8, 8);
+            }
+
+        .navbar a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .navbar a:hover {
+            background-color: rgb(121, 223, 243);
+            color: black;
+        }
+        .heading {
+            color: #000000;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 21px;
+        }
+        .container {
+            text-align:center;
+            padding: 14px 16px;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a class="active" href="/">Home</a>
+        <a href="{{url_for('Add')}}">Add Address</a>
+        <a href="{{url_for('Search')}}">Search Address</a>
+        <a href="{{url_for('listAll')}}">View All Records</a>
+        <a href="{{url_for('edit')}}">Edit and Delete</a>
+    </div>
+</body>
+{% block content %}
+{%endblock%}
+</html>
